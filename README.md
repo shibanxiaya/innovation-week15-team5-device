@@ -1,118 +1,73 @@
-# 创新实验第15周：团队协作与 Android 真机运行示例
+# innovation-week15-team5-device
 
-本项目用于第15周课堂任务：在第14周 Flutter Hello World 和 GitHub 提交练习的基础上，小组通过 Pull Request 协作修改同一个 Flutter 项目，并把最终版本运行到真实 Android 手机上。
+## 项目信息
 
-## 最终要提交什么
+### 小组名称（groupName）
+Team5 - 智能设备创新小组
 
-每组需要提交：
+### 项目标题（projectTitle）
+智能设备数据采集与监控系统
 
-1. GitHub 原始仓库链接。
-2. 4 名组员的 Fork、分支、commit 或 Pull Request 证据。
-3. 组长合并 PR 后的最终 `main` 分支截图。
-4. 真实 Android 手机运行本应用的照片。
-5. README 中展示真机照片和小组分工。
+### 项目口号（projectSlogan）
+创新驱动，智能感知未来
 
-## 推荐协作方式
+---
 
-本周统一使用 Fork + Pull Request：
+## 小组成员与分工（members）
 
-```text
-组长创建原始仓库
-  ↓
-组员 Fork 到自己的 GitHub
-  ↓
-组员 clone 自己的 Fork
-  ↓
-组员创建个人分支并修改指定区域
-  ↓
-组员 push 到自己的 Fork
-  ↓
-组员向组长仓库提交 Pull Request
-  ↓
-组长 Review 并合并
-  ↓
-主电脑运行合并后的最终版本
-```
+| 角色 | 姓名 | 分工 |
+| :--- | :--- | :--- |
+| 组长 | 李思琪 | 创建原始仓库、维护main分支、审核PR、组织真机运行与证据提交 |
+| 组员A | 王雯娴 | 修改 groupName、projectTitle、projectSlogan |
+| 组员B | 徐冬琴 | 补全members中的成员姓名与分工 |
+| 组员C | 黄梦思 | 补充realDeviceChecks中的真机运行检查项 |
+| 组员D | 钟淑蓉 | 补充evidenceRules，并把真机照片加入README |
 
-组员不要直接 push 到组长仓库的 `main` 分支。
+---
 
-## 小组分工建议
+## 真机运行检查项（realDeviceChecks）
 
-| 角色 | 修改位置 | 任务 |
-| --- | --- | --- |
-| 组长 | GitHub 仓库 | 创建仓库、维护 `main`、审核 PR、组织真机运行 |
-| 组员 A | `lib/main.dart` | 修改 `groupName`、`projectTitle`、`projectSlogan` |
-| 组员 B | `lib/main.dart` | 补全 `members` 中的小组成员姓名与分工 |
-| 组员 C | `lib/main.dart` | 补充 `realDeviceChecks` 中的真机检查项 |
-| 组员 D | `lib/main.dart` 和 `README.md` | 补充 `evidenceRules`，提交真机照片说明 |
+- [ ] 设备连接正常，能够稳定连接到网络
+- [ ] 传感器数据采集功能正常工作
+- [ ] 数据上传至云端服务正常
+- [ ] 设备响应延迟在可接受范围内
+- [ ] 设备在不同网络环境下稳定性测试通过
+- [ ] 设备续航能力满足预期需求
+- [ ] 设备温度控制在安全范围内
+- [ ] 设备与配套APP通信正常
 
-## 运行命令
+---
 
-进入项目根目录后执行：
+## 证据规则（evidenceRules）
 
-```bash
-flutter pub get
-flutter test
-flutter run
-```
+### 提交要求
+1. 每次真机运行测试需拍摄至少3张照片：
+   - 设备正面运行状态图
+   - 设备连接界面截图
+   - 数据采集成功界面截图
 
-如果电脑连接了多台设备，先查看设备：
+2. 照片命名规范：`设备名_测试日期_序号.jpg`，例如：`SmartDevice_20240115_01.jpg`
 
-```bash
-flutter devices
-```
+3. 所有证据照片需在测试完成后24小时内提交至仓库指定目录
 
-再指定真实 Android 手机运行：
+4. 真机运行视频需包含：
+   - 设备启动过程
+   - 核心功能演示
+   - 测试结果展示
 
-```bash
-flutter run -d 设备ID
-```
+### 审核标准
+- 照片清晰可见设备状态和屏幕内容
+- 视频时长不少于60秒
+- 所有检查项均需通过并留有证据
 
-## Android 真机检查
+---
 
-连接手机后先检查：
+## 真机照片
 
-```bash
-adb devices
-flutter devices
-```
+待补充...
 
-`adb devices` 的状态应为：
+---
 
-```text
-device
-```
+## 许可证
 
-如果显示 `unauthorized`，请解锁手机并允许 USB 调试。
-
-## 真机照片要求
-
-请把照片放到：
-
-```text
-images/android-real-device.jpg
-```
-
-并在本 README 中引用：
-
-```markdown
-![Android 真机运行照片](images/android-real-device.jpg)
-```
-
-合格照片必须满足：
-
-- 真实 Android 手机正在运行本小组 Flutter 应用；
-- 不能是 Web 截图；
-- 不能是 Android 模拟器截图；
-- 不能用手机本机截图代替；
-- 必须由第二部手机拍摄；
-- 照片中能看到手持手机；
-- 不包含聊天记录、手机号、定位等隐私信息。
-
-## 本组真机运行照片
-
-提交照片后，下面应显示本组运行效果：
-
-![Android 真机运行照片](images/android-real-device.jpg)
-
-如果图片暂时无法显示，请检查 `images/android-real-device.jpg` 是否已提交，以及文件名大小写是否一致。
+MIT License
