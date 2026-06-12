@@ -24,9 +24,9 @@ class InnovationTeamDeviceApp extends StatelessWidget {
 class TeamDeviceHomePage extends StatelessWidget {
   const TeamDeviceHomePage({super.key});
 
-  static const String groupName = '第5组 创新实验团队';
+  static const String groupName = '第X组 创新实验团队';
   static const String projectTitle = 'Flutter Android 真机验收看板';
-  static const String projectSlogan = '协作共赢，用 GitHub 和 Flutter 打造团队成果';
+  static const String projectSlogan = '用 GitHub 协作，把第14周个人 Hello World 升级成小组真机运行成果';
 
   static const List<TeamMember> members = [
     TeamMember(role: '组长', name: '请填写组长姓名', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
@@ -38,10 +38,13 @@ class TeamDeviceHomePage extends StatelessWidget {
 
   static const List<String> realDeviceChecks = [
     '主电脑能执行 flutter doctor，并识别 Android toolchain',
-    'Android 手机已打开开发者选项和 USB 调试',
+    'Android 手机已打开开发者选项（设置→关于手机→连续点击版本号7次）和 USB 调试',
+    'USB 数据线支持数据传输（非仅充电线），手机连接模式已切换为"文件传输（MTP）"',
     'adb devices 显示设备状态为 device，而不是 unauthorized',
     'flutter devices 能看到真实 Android 设备',
+    '运行设备型号：OPPO Reno12 5G（PHF110）',
     'flutter run 后手机屏幕显示本小组修改后的页面',
+    '已用第二部手机拍摄手持真机运行照片，照片中可看到手机屏幕上的 App 界面',
   ];
 
   static const List<String> evidenceRules = [
@@ -49,9 +52,6 @@ class TeamDeviceHomePage extends StatelessWidget {
     '照片中要看到手持真实 Android 手机和本应用页面',
     'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
     '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
-    '真机照片需包含应用运行界面和成员信息展示',
-    '照片命名格式：成员姓名_设备型号_日期.jpg',
-    '确保照片清晰度足够，能看清应用内容和手机型号',
   ];
 
   @override
