@@ -29,11 +29,11 @@ class TeamDeviceHomePage extends StatelessWidget {
   static const String projectSlogan = '协作共赢，用 GitHub 和 Flutter 打造团队成果';
 
   static const List<TeamMember> members = [
-    TeamMember(role: '组长', name: '李思琪', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
-    TeamMember(role: '组员 A', name: '王雯娴', task: '修改 groupName、projectTitle、projectSlogan'),
-    TeamMember(role: '组员 B', name: '徐冬琴', task: '补全 members 中的成员姓名与分工'),
-    TeamMember(role: '组员 C', name: '黄梦思', task: '补充 realDeviceChecks 中的真机运行检查项'),
-    TeamMember(role: '组员 D', name: '钟淑蓉', task: '补充 evidenceRules，并把真机照片加入 README'),
+    TeamMember(role: '组长', name: '请填写组长姓名', task: '创建原始仓库、维护 main、审核 PR、组织真机运行与证据提交'),
+    TeamMember(role: '组员 A', name: '请填写姓名', task: '修改 groupName、projectTitle、projectSlogan'),
+    TeamMember(role: '组员 B', name: '请填写姓名', task: '补全 members 中的成员姓名与分工'),
+    TeamMember(role: '组员 C', name: '请填写姓名', task: '补充 realDeviceChecks 中的真机运行检查项'),
+    TeamMember(role: '组员 D', name: '请填写姓名', task: '补充 evidenceRules，并把真机照片加入 README'),
   ];
 
   static const List<String> realDeviceChecks = [
@@ -49,6 +49,9 @@ class TeamDeviceHomePage extends StatelessWidget {
     '照片中要看到手持真实 Android 手机和本应用页面',
     'README 中要包含 GitHub 协作说明、PR 合并记录和真机照片',
     '提交前检查照片不包含私人聊天、手机号、定位等隐私信息',
+    '真机照片需包含应用运行界面和成员信息展示',
+    '照片命名格式：成员姓名_设备型号_日期.jpg',
+    '确保照片清晰度足够，能看清应用内容和手机型号',
   ];
 
   @override
